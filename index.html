@@ -1,0 +1,628 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Texas Laundry Pro - Premium Pickup & Delivery Service</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        body { font-family: 'Inter', sans-serif; }
+        .hero-gradient { background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); }
+        .card-hover { transition: all 0.3s ease; }
+        .card-hover:hover { transform: translateY(-5px); box-shadow: 0 20px 40px rgba(0,0,0,0.1); }
+        .scroll-smooth { scroll-behavior: smooth; }
+        .fade-in { opacity: 0; transform: translateY(20px); transition: all 0.6s ease; }
+        .fade-in.visible { opacity: 1; transform: translateY(0); }
+        .mobile-menu { transform: translateX(100%); transition: transform 0.3s ease; }
+        .mobile-menu.open { transform: translateX(0); }
+    </style>
+</head>
+<body class="scroll-smooth">
+    <!-- Navigation -->
+    <nav class="bg-white shadow-lg fixed w-full top-0 z-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center h-16">
+                <div class="flex items-center">
+                    <div class="flex-shrink-0">
+                        <h1 class="text-2xl font-bold text-indigo-600">
+                            <i class="fas fa-tshirt mr-2"></i>Texas Laundry Pro
+                        </h1>
+                    </div>
+                </div>
+                
+                <!-- Desktop Menu -->
+                <div class="hidden md:block">
+                    <div class="ml-10 flex items-baseline space-x-4">
+                        <a href="#home" class="text-gray-700 hover:text-indigo-600 px-3 py-2 rounded-md text-sm font-medium transition-colors">Home</a>
+                        <a href="#services" class="text-gray-700 hover:text-indigo-600 px-3 py-2 rounded-md text-sm font-medium transition-colors">Services</a>
+                        <a href="#how-it-works" class="text-gray-700 hover:text-indigo-600 px-3 py-2 rounded-md text-sm font-medium transition-colors">How It Works</a>
+                        <a href="#testimonials" class="text-gray-700 hover:text-indigo-600 px-3 py-2 rounded-md text-sm font-medium transition-colors">Reviews</a>
+                        <a href="#contact" class="bg-indigo-600 text-white px-4 py-2 rounded-md text-sm font-medium hover:bg-indigo-700 transition-colors">Schedule Pickup</a>
+                    </div>
+                </div>
+                
+                <!-- Mobile menu button -->
+                <div class="md:hidden">
+                    <button id="mobile-menu-btn" class="text-gray-700 hover:text-indigo-600 focus:outline-none">
+                        <i class="fas fa-bars text-xl"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Mobile Menu -->
+        <div id="mobile-menu" class="mobile-menu fixed top-16 right-0 w-64 h-full bg-white shadow-lg md:hidden">
+            <div class="px-4 py-6 space-y-4">
+                <a href="#home" class="block text-gray-700 hover:text-indigo-600 py-2 font-medium">Home</a>
+                <a href="#services" class="block text-gray-700 hover:text-indigo-600 py-2 font-medium">Services</a>
+                <a href="#how-it-works" class="block text-gray-700 hover:text-indigo-600 py-2 font-medium">How It Works</a>
+                <a href="#testimonials" class="block text-gray-700 hover:text-indigo-600 py-2 font-medium">Reviews</a>
+                <a href="#contact" class="block bg-indigo-600 text-white px-4 py-2 rounded-md font-medium hover:bg-indigo-700 transition-colors text-center">Schedule Pickup</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero-gradient pt-20 pb-16 md:pt-32 md:pb-24">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center">
+                <h1 class="text-4xl md:text-6xl font-bold text-white mb-6 fade-in">
+                    Reclaim Your Time.<br>
+                    <span class="text-yellow-300">We'll Handle the Laundry</span> in Texas.
+                </h1>
+                <p class="text-xl md:text-2xl text-blue-100 mb-8 max-w-3xl mx-auto fade-in">
+                    From everyday wash & fold to expert dry cleaning, we deliver sparkling results right to your door. Experience the convenience Texans trust.
+                </p>
+                <div class="flex flex-col sm:flex-row gap-4 justify-center fade-in">
+                    <button class="bg-yellow-400 text-gray-900 px-8 py-4 rounded-lg text-lg font-semibold hover:bg-yellow-300 transition-colors shadow-lg">
+                        <i class="fas fa-calendar-alt mr-2"></i>Schedule Pickup Now
+                    </button>
+                    <button class="bg-transparent border-2 border-white text-white px-8 py-4 rounded-lg text-lg font-semibold hover:bg-white hover:text-indigo-600 transition-colors">
+                        <i class="fas fa-calculator mr-2"></i>Get a Free Quote
+                    </button>
+                </div>
+                <p class="text-blue-100 mt-4 text-sm">
+                    <i class="fas fa-map-marker-alt mr-1"></i>Serving Dallas, Fort Worth, Houston, and surrounding areas
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- How It Works Section -->
+    <section id="how-it-works" class="py-16 bg-gray-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl md:text-4xl font-bold text-gray-900 mb-4 fade-in">
+                    Your Laundry, Simplified in 3 Easy Steps
+                </h2>
+                <p class="text-xl text-gray-600 max-w-2xl mx-auto fade-in">
+                    No more laundry headaches. Just follow our simple process for fresh, clean clothes, hassle-free.
+                </p>
+            </div>
+            
+            <div class="grid md:grid-cols-3 gap-8">
+                <div class="text-center fade-in">
+                    <div class="bg-indigo-100 w-20 h-20 rounded-full flex items-center justify-center mx-auto mb-6">
+                        <i class="fas fa-calendar-check text-3xl text-indigo-600"></i>
+                    </div>
+                    <h3 class="text-2xl font-bold text-gray-900 mb-4">1. Schedule Online</h3>
+                    <p class="text-gray-600 text-lg">
+                        Pick your preferred pickup and delivery times right from your phone or computer. It's quick and convenient!
+                    </p>
+                </div>
+                
+                <div class="text-center fade-in">
+                    <div class="bg-green-100 w-20 h-20 rounded-full flex items-center justify-center mx-auto mb-6">
+                        <i class="fas fa-hands-washing text-3xl text-green-600"></i>
+                    </div>
+                    <h3 class="text-2xl font-bold text-gray-900 mb-4">2. We Pick Up & Expertly Clean</h3>
+                    <p class="text-gray-600 text-lg">
+                        Our friendly team will collect your laundry. We then use eco-friendly practices and professional care to ensure your clothes are returned perfectly clean and fresh.
+                    </p>
+                </div>
+                
+                <div class="text-center fade-in">
+                    <div class="bg-yellow-100 w-20 h-20 rounded-full flex items-center justify-center mx-auto mb-6">
+                        <i class="fas fa-truck text-3xl text-yellow-600"></i>
+                    </div>
+                    <h3 class="text-2xl font-bold text-gray-900 mb-4">3. Fresh Laundry, Delivered</h3>
+                    <p class="text-gray-600 text-lg">
+                        That's it! Enjoy your beautifully cleaned, folded, or hung clothes, brought right back to your doorstep, on time, every time.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section id="services" class="py-16 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl md:text-4xl font-bold text-gray-900 mb-4 fade-in">
+                    Tailored Laundry Solutions for Every Need
+                </h2>
+                <p class="text-xl text-gray-600 max-w-3xl mx-auto fade-in">
+                    Whether it's your everyday essentials or delicate garments, we've got you covered with our professional, reliable services.
+                </p>
+            </div>
+            
+            <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+                <div class="bg-white rounded-xl shadow-lg p-6 card-hover fade-in">
+                    <div class="bg-blue-100 w-16 h-16 rounded-lg flex items-center justify-center mb-6">
+                        <i class="fas fa-tshirt text-2xl text-blue-600"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-gray-900 mb-4">Effortless Wash & Fold</h3>
+                    <p class="text-gray-600 mb-4">
+                        Say goodbye to laundry day! We'll wash, dry, and neatly fold your clothes with premium, eco-friendly detergents.
+                    </p>
+                    <a href="#" class="text-blue-600 font-semibold hover:text-blue-700">Ready to simplify? →</a>
+                </div>
+                
+                <div class="bg-white rounded-xl shadow-lg p-6 card-hover fade-in">
+                    <div class="bg-purple-100 w-16 h-16 rounded-lg flex items-center justify-center mb-6">
+                        <i class="fas fa-user-tie text-2xl text-purple-600"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-gray-900 mb-4">Expert Dry Cleaning</h3>
+                    <p class="text-gray-600 mb-4">
+                        Trust your delicates, suits, and special garments to our dry cleaning specialists. We ensure meticulous care.
+                    </p>
+                    <a href="#" class="text-purple-600 font-semibold hover:text-purple-700">Learn more about our care →</a>
+                </div>
+                
+                <div class="bg-white rounded-xl shadow-lg p-6 card-hover fade-in">
+                    <div class="bg-green-100 w-16 h-16 rounded-lg flex items-center justify-center mb-6">
+                        <i class="fas fa-bed text-2xl text-green-600"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-gray-900 mb-4">Comforters & Linens</h3>
+                    <p class="text-gray-600 mb-4">
+                        Give your bedding the deep clean it deserves. We handle large items with ease, leaving them fresh and hygienic.
+                    </p>
+                    <a href="#" class="text-green-600 font-semibold hover:text-green-700">Get a quote for oversized items →</a>
+                </div>
+                
+                <div class="bg-white rounded-xl shadow-lg p-6 card-hover fade-in">
+                    <div class="bg-red-100 w-16 h-16 rounded-lg flex items-center justify-center mb-6">
+                        <i class="fas fa-star text-2xl text-red-600"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-gray-900 mb-4">Specialty Items & More</h3>
+                    <p class="text-gray-600 mb-4">
+                        From wedding gowns to leather, inquire about our specialized cleaning services designed for your unique needs.
+                    </p>
+                    <a href="#" class="text-red-600 font-semibold hover:text-red-700">Have a question about an item? →</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Why Choose Us Section -->
+    <section class="py-16 bg-gray-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl md:text-4xl font-bold text-gray-900 mb-4 fade-in">
+                    The Texas Standard for Laundry Care
+                </h2>
+                <p class="text-xl text-gray-600 max-w-3xl mx-auto fade-in">
+                    We're more than just a laundry service; we're your trusted local partner, committed to convenience, quality, and community.
+                </p>
+            </div>
+            
+            <div class="grid lg:grid-cols-2 gap-12 items-center">
+                <div class="space-y-8">
+                    <div class="flex items-start space-x-4 fade-in">
+                        <div class="bg-indigo-100 p-3 rounded-lg">
+                            <i class="fas fa-home text-indigo-600 text-xl"></i>
+                        </div>
+                        <div>
+                            <h3 class="text-xl font-bold text-gray-900 mb-2">Convenience at Your Doorstep</h3>
+                            <p class="text-gray-600">Serving cities across Texas, we make laundry pickup and delivery effortless, fitting seamlessly into your busy schedule. No more trips to the laundromat!</p>
+                        </div>
+                    </div>
+                    
+                    <div class="flex items-start space-x-4 fade-in">
+                        <div class="bg-green-100 p-3 rounded-lg">
+                            <i class="fas fa-leaf text-green-600 text-xl"></i>
+                        </div>
+                        <div>
+                            <h3 class="text-xl font-bold text-gray-900 mb-2">Eco-Friendly & Gentle Care</h3>
+                            <p class="text-gray-600">We use advanced, environmentally conscious cleaning methods and premium products that are tough on dirt but gentle on your clothes – and the planet.</p>
+                        </div>
+                    </div>
+                    
+                    <div class="flex items-start space-x-4 fade-in">
+                        <div class="bg-yellow-100 p-3 rounded-lg">
+                            <i class="fas fa-award text-yellow-600 text-xl"></i>
+                        </div>
+                        <div>
+                            <h3 class="text-xl font-bold text-gray-900 mb-2">Experienced & Trusted Professionals</h3>
+                            <p class="text-gray-600">Our team comprises trained laundry experts dedicated to handling your garments with the utmost care, ensuring pristine results every time.</p>
+                        </div>
+                    </div>
+                    
+                    <div class="flex items-start space-x-4 fade-in">
+                        <div class="bg-blue-100 p-3 rounded-lg">
+                            <i class="fas fa-shield-alt text-blue-600 text-xl"></i>
+                        </div>
+                        <div>
+                            <h3 class="text-xl font-bold text-gray-900 mb-2">Satisfaction Guaranteed</h3>
+                            <p class="text-gray-600">Your peace of mind is our priority. We stand by the quality of our work – if you're not happy, we'll make it right.</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="relative fade-in">
+                    <div class="bg-gradient-to-br from-indigo-500 to-purple-600 rounded-2xl p-8 text-white">
+                        <h3 class="text-2xl font-bold mb-4">Transparent & Fair Pricing</h3>
+                        <p class="text-indigo-100 mb-6">No surprises, just clear, competitive pricing you can count on. Get a quote instantly and see the value.</p>
+                        <button class="bg-white text-indigo-600 px-6 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-colors">
+                            Get Instant Quote
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials Section -->
+    <section id="testimonials" class="py-16 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl md:text-4xl font-bold text-gray-900 mb-4 fade-in">
+                    What Our Texas Customers Are Saying
+                </h2>
+            </div>
+            
+            <div class="grid md:grid-cols-3 gap-8">
+                <div class="bg-gray-50 rounded-xl p-6 fade-in">
+                    <div class="flex items-center mb-4">
+                        <div class="flex text-yellow-400">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                        </div>
+                    </div>
+                    <p class="text-gray-600 mb-4 italic">
+                        "Absolutely life-changing! As a busy mom in Houston, Texas Laundry Pro has given me back hours every week. My clothes come back perfectly clean and folded. Highly recommend!"
+                    </p>
+                    <div class="flex items-center">
+                        <div class="w-10 h-10 bg-indigo-100 rounded-full flex items-center justify-center mr-3">
+                            <i class="fas fa-user text-indigo-600"></i>
+                        </div>
+                        <div>
+                            <p class="font-semibold text-gray-900">Sarah M.</p>
+                            <p class="text-sm text-gray-500">Houston, TX</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="bg-gray-50 rounded-xl p-6 fade-in">
+                    <div class="flex items-center mb-4">
+                        <div class="flex text-yellow-400">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                        </div>
+                    </div>
+                    <p class="text-gray-600 mb-4 italic">
+                        "I used to dread dry cleaning trips, but now it's effortless. Their pickup and delivery service in Dallas is a game-changer for my business attire."
+                    </p>
+                    <div class="flex items-center">
+                        <div class="w-10 h-10 bg-indigo-100 rounded-full flex items-center justify-center mr-3">
+                            <i class="fas fa-user text-indigo-600"></i>
+                        </div>
+                        <div>
+                            <p class="font-semibold text-gray-900">David R.</p>
+                            <p class="text-sm text-gray-500">Dallas, TX</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="bg-gray-50 rounded-xl p-6 fade-in">
+                    <div class="flex items-center mb-4">
+                        <div class="flex text-yellow-400">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                        </div>
+                    </div>
+                    <p class="text-gray-600 mb-4 italic">
+                        "Finally, an eco-friendly laundry service I can trust! My clothes feel fresh, and I love knowing they use sustainable practices."
+                    </p>
+                    <div class="flex items-center">
+                        <div class="w-10 h-10 bg-indigo-100 rounded-full flex items-center justify-center mr-3">
+                            <i class="fas fa-user text-indigo-600"></i>
+                        </div>
+                        <div>
+                            <p class="font-semibold text-gray-900">Jessica L.</p>
+                            <p class="text-sm text-gray-500">Austin, TX</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Service Areas Section -->
+    <section class="py-16 bg-gray-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl md:text-4xl font-bold text-gray-900 mb-4 fade-in">
+                    Proudly Serving Communities Across Texas
+                </h2>
+                <p class="text-xl text-gray-600 max-w-2xl mx-auto fade-in">
+                    We're bringing premium laundry and dry cleaning pickup & delivery right to your neighborhood!
+                </p>
+            </div>
+            
+            <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-8 mb-12">
+                <div class="text-center fade-in">
+                    <div class="bg-indigo-100 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
+                        <i class="fas fa-city text-2xl text-indigo-600"></i>
+                    </div>
+                    <h3 class="text-lg font-semibold text-gray-900">Dallas-Fort Worth</h3>
+                    <p class="text-gray-600">Metroplex</p>
+                </div>
+                
+                <div class="text-center fade-in">
+                    <div class="bg-green-100 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
+                        <i class="fas fa-rocket text-2xl text-green-600"></i>
+                    </div>
+                    <h3 class="text-lg font-semibold text-gray-900">Houston</h3>
+                    <p class="text-gray-600">Space City</p>
+                </div>
+                
+                <div class="text-center fade-in">
+                    <div class="bg-purple-100 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
+                        <i class="fas fa-music text-2xl text-purple-600"></i>
+                    </div>
+                    <h3 class="text-lg font-semibold text-gray-900">Austin</h3>
+                    <p class="text-gray-600">Keep it Weird</p>
+                </div>
+                
+                <div class="text-center fade-in">
+                    <div class="bg-yellow-100 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
+                        <i class="fas fa-landmark text-2xl text-yellow-600"></i>
+                    </div>
+                    <h3 class="text-lg font-semibold text-gray-900">San Antonio</h3>
+                    <p class="text-gray-600">Alamo City</p>
+                </div>
+            </div>
+            
+            <div class="bg-white rounded-xl shadow-lg p-8 max-w-2xl mx-auto text-center fade-in">
+                <h3 class="text-2xl font-bold text-gray-900 mb-4">Not sure if we service your area?</h3>
+                <p class="text-gray-600 mb-6">Enter your zip code below to confirm, or give us a call!</p>
+                <div class="flex flex-col sm:flex-row gap-4 max-w-md mx-auto">
+                    <input type="text" placeholder="Enter your zip code" class="flex-1 px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-indigo-500">
+                    <button class="bg-indigo-600 text-white px-6 py-3 rounded-lg font-semibold hover:bg-indigo-700 transition-colors">
+                        Check Coverage
+                    </button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section id="contact" class="py-16 hero-gradient">
+        <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+            <h2 class="text-3xl md:text-4xl font-bold text-white mb-4 fade-in">
+                Ready for a Laundry-Free Life?
+            </h2>
+            <p class="text-xl text-blue-100 mb-8 fade-in">
+                Stop spending your valuable time on chores. Let Texas Laundry Pro handle your laundry with professionalism and care.
+            </p>
+            <div class="flex flex-col sm:flex-row gap-4 justify-center fade-in">
+                <button class="bg-yellow-400 text-gray-900 px-8 py-4 rounded-lg text-lg font-semibold hover:bg-yellow-300 transition-colors shadow-lg">
+                    <i class="fas fa-rocket mr-2"></i>Get Started Today!
+                </button>
+                <button class="bg-transparent border-2 border-white text-white px-8 py-4 rounded-lg text-lg font-semibold hover:bg-white hover:text-indigo-600 transition-colors">
+                    <i class="fas fa-calendar-alt mr-2"></i>Schedule Your First Pickup
+                </button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-gray-900 text-white py-12">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid md:grid-cols-4 gap-8">
+                <div>
+                    <h3 class="text-2xl font-bold mb-4">
+                        <i class="fas fa-tshirt mr-2"></i>Texas Laundry Pro
+                    </h3>
+                    <p class="text-gray-300 mb-4">
+                        Premium laundry and dry cleaning services with convenient pickup and delivery across Texas.
+                    </p>
+                    <div class="flex space-x-4">
+                        <a href="#" class="text-gray-300 hover:text-white"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#" class="text-gray-300 hover:text-white"><i class="fab fa-instagram"></i></a>
+                        <a href="#" class="text-gray-300 hover:text-white"><i class="fab fa-twitter"></i></a>
+                    </div>
+                </div>
+                
+                <div>
+                    <h4 class="text-lg font-semibold mb-4">Contact Info</h4>
+                    <ul class="space-y-2 text-gray-300">
+                        <li><i class="fas fa-phone mr-2"></i>(555) 123-WASH</li>
+                        <li><i class="fas fa-envelope mr-2"></i>hello@texaslaundrypro.com</li>
+                        <li><i class="fas fa-clock mr-2"></i>Mon-Fri: 7AM-7PM</li>
+                        <li><i class="fas fa-clock mr-2"></i>Sat-Sun: 8AM-6PM</li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="border-t border-gray-700 mt-8 pt-8 text-center">
+                <p class="text-gray-300">
+                    © 2025 Texas Laundry Pro. All rights reserved. | 
+                    <a href="#" class="hover:text-white">Privacy Policy</a> | 
+                    <a href="#" class="hover:text-white">Terms of Service</a>
+                </p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Mobile menu toggle
+        const mobileMenuBtn = document.getElementById('mobile-menu-btn');
+        const mobileMenu = document.getElementById('mobile-menu');
+        
+        mobileMenuBtn.addEventListener('click', () => {
+            mobileMenu.classList.toggle('open');
+        });
+
+        // Close mobile menu when clicking on a link
+        const mobileLinks = mobileMenu.querySelectorAll('a');
+        mobileLinks.forEach(link => {
+            link.addEventListener('click', () => {
+                mobileMenu.classList.remove('open');
+            });
+        });
+
+        // Smooth scrolling for navigation links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start'
+                    });
+                }
+            });
+        });
+
+        // Fade in animation on scroll
+        const observerOptions = {
+            threshold: 0.1,
+            rootMargin: '0px 0px -50px 0px'
+        };
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('visible');
+                }
+            });
+        }, observerOptions);
+
+        // Observe all fade-in elements
+        document.querySelectorAll('.fade-in').forEach(el => {
+            observer.observe(el);
+        });
+
+        // Initialize first section as visible
+        document.querySelectorAll('#home .fade-in').forEach(el => {
+            el.classList.add('visible');
+        });
+
+        // Add floating animation to hero buttons
+        const heroButtons = document.querySelectorAll('#home button');
+        heroButtons.forEach((button, index) => {
+            button.style.animationDelay = `${index * 0.2}s`;
+        });
+
+        // Add hover effects to service cards
+        const serviceCards = document.querySelectorAll('.card-hover');
+        serviceCards.forEach(card => {
+            card.addEventListener('mouseenter', () => {
+                card.style.transform = 'translateY(-10px) scale(1.02)';
+            });
+            
+            card.addEventListener('mouseleave', () => {
+                card.style.transform = 'translateY(0) scale(1)';
+            });
+        });
+
+        // Add click handlers for CTA buttons
+        const ctaButtons = document.querySelectorAll('button');
+        ctaButtons.forEach(button => {
+            button.addEventListener('click', (e) => {
+                // Add click animation
+                button.style.transform = 'scale(0.95)';
+                setTimeout(() => {
+                    button.style.transform = 'scale(1)';
+                }, 150);
+                
+                // You can add actual functionality here
+                console.log('Button clicked:', button.textContent);
+            });
+        });
+
+        // Add parallax effect to hero section
+        window.addEventListener('scroll', () => {
+            const scrolled = window.pageYOffset;
+            const parallax = document.querySelector('.hero-gradient');
+            const speed = scrolled * 0.5;
+            
+            if (parallax) {
+                parallax.style.transform = `translateY(${speed}px)`;
+            }
+        });
+
+        // Add loading animation
+        window.addEventListener('load', () => {
+            document.body.style.opacity = '1';
+            document.body.style.transition = 'opacity 0.5s ease-in-out';
+        });
+
+        // Add form validation for zip code checker
+        const zipInput = document.querySelector('input[placeholder="Enter your zip code"]');
+        const checkButton = Array.from(document.querySelectorAll('button')).find(btn => 
+            btn.textContent.trim() === 'Check Coverage'
+        );
+        
+        if (zipInput && checkButton) {
+            checkButton.addEventListener('click', () => {
+                const zipCode = zipInput.value.trim();
+                if (zipCode.length === 5 && /^\d+$/.test(zipCode)) {
+                    // Simulate checking coverage
+                    checkButton.textContent = 'Checking...';
+                    checkButton.disabled = true;
+                    
+                    setTimeout(() => {
+                        checkButton.textContent = 'We Service Your Area!';
+                        checkButton.style.backgroundColor = '#10b981';
+                        setTimeout(() => {
+                            checkButton.textContent = 'Check Coverage';
+                            checkButton.style.backgroundColor = '';
+                            checkButton.disabled = false;
+                        }, 2000);
+                    }, 1000);
+                } else {
+                    zipInput.style.borderColor = '#ef4444';
+                    setTimeout(() => {
+                        zipInput.style.borderColor = '';
+                    }, 2000);
+                }
+            });
+        }
+    </script>
+</body>
+</html>4">Services</h4>
+                    <ul class="space-y-2 text-gray-300">
+                        <li><a href="#" class="hover:text-white">Wash & Fold</a></li>
+                        <li><a href="#" class="hover:text-white">Dry Cleaning</a></li>
+                        <li><a href="#" class="hover:text-white">Comforters & Linens</a></li>
+                        <li><a href="#" class="hover:text-white">Specialty Items</a></li>
+                    </ul>
+                </div>
+                
+                <div>
+                    <h4 class="text-lg font-semibold mb-4">Service Areas</h4>
+                    <ul class="space-y-2 text-gray-300">
+                        <li>Dallas-Fort Worth</li>
+                        <li>Houston</li>
+                        <li>Austin</li>
+                        <li>San Antonio</li>
+                    </ul>
+                </div>
+                
+                <div>
+                    <h4 class="text-lg font-semibold mb-
